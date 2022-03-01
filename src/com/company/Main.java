@@ -14,6 +14,7 @@ public class Main {
         File file = new File("LoginFile.txt");
         ConfirmLogin();
         VerifyLogin();
+        Leaderboard();
         //Register();
         String Email = "moo@gmail.com";
         System.out.println(ValidateEmail(Email));
@@ -84,6 +85,9 @@ public class Main {
         } catch (Exception e) {
             System.out.println("An error occurred while logging in");
         }
+    }
+
+
 
 
 //    public static void Register() {
