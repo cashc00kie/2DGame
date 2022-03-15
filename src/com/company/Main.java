@@ -15,7 +15,6 @@ public class Main {
         createFile();
         ConfirmLogin();
         //Leaderboard();
-        //Register();
         String Email = "moo@gmail.com";
         System.out.println(ValidateEmail(Email));
     }
