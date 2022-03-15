@@ -1,7 +1,7 @@
 package com.company;
 import java.io.IOException;
-import java.*;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.Scanner;
@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
         createFile();
         ConfirmLogin();
-        //Leaderboard();
+        Leaderboard();
         String Email = "moo@gmail.com";
         System.out.println(ValidateEmail(Email));
     }
@@ -97,6 +97,31 @@ public class Main {
         if (!userValid || !passwordValid) {
             System.out.println("Not valid");
         } else System.out.println("Valid");
+    }
+
+    public static void Leaderboard(){
+        //private static Leaderboard lBoard;
+        String filePath;
+        String highScores;
+
+        //All time leaderboards
+        ArrayList<Integer> topScores;
+        ArrayList<Integer> topTiles;
+        ArrayList<Integer> topTimes;
+
+        filePath = new File("").getAbsolutePath();
+        highScores = "Scores";
+
+        topScores = new ArrayList<Integer>();
+        topTiles = new ArrayList<Integer>();
+        topTimes = new ArrayList<Integer>();
+
+        public static Leaderboard getInstance();{
+            if (lBoard == null){
+                lboard
+            }
+
+        }
     }
 
 
