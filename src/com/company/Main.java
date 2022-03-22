@@ -93,7 +93,7 @@ public class Main {
 
         if (!userValid || !passwordValid) {
             System.out.println("Not valid");
-        } else System.out.println("Valid");
+        } else System.out.println("Valid"); new GameFrame();
     }
 
 

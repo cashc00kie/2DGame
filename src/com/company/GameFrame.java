@@ -5,7 +5,6 @@ import javax.swing.JFrame;
 
         GameFrame() {
             GamePanel panel = new GamePanel();  //declare a new panel
-
             this.add(panel); //adding the panel we declared to our container
             this.setTitle("Snake Game"); //giving title to our game Panel
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //this give the functionality to the close button that appears on our frame to close it on click
@@ -15,4 +14,7 @@ import javax.swing.JFrame;
             this.setLocationRelativeTo(null); //sets the location of our panel on window
 
         }
+
+
+
     }
