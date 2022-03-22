@@ -6,8 +6,8 @@ import java.util.Random;
 
     public class GamePanel extends JPanel implements ActionListener {       //GamePanel class extends properties of JPanel class and implements properties of interface ActionListener also
 
-        static final int SCREEN_WIDTH = 1080;                          //width of our panel where we set field for our game
-        static final int SCREEN_HEIGHT = 1080;                       //height of our panel
+        static final int SCREEN_WIDTH = 900;                          //width of our panel where we set field for our game
+        static final int SCREEN_HEIGHT = 900;                       //height of our panel
         static final int UNIT_SIZE = 25;                           //size of each unit
         static final int GAME_UNITS = (SCREEN_WIDTH * SCREEN_HEIGHT) / (UNIT_SIZE * UNIT_SIZE);     //find the no. of cells
         static final int DELAY = 100;                                  //delay is parameter for timer class that pass the delay in milliseconds.
@@ -34,6 +34,9 @@ import java.util.Random;
         public void startGame() {   //startGame class first run newFood class
 
             newFood();
+            this.requestFocusInWindow();
+            this.grabFocus();
+            this.repaint();
             running = true; //sets running to true as through running we define the condition of our game
             timer = new Timer(DELAY, this); //Timer is a swing class that takes DELAY as parameter and a listener
             timer.start(); //starts the timer that we create from Timer class

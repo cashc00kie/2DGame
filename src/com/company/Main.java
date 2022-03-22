@@ -8,8 +8,7 @@ import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.Scanner;
-
-
+import com.company.Snake_Game;
 public class Main {
 
     private static File file = new File("LoginFile.txt");
@@ -20,6 +19,8 @@ public class Main {
         //Leaderboard();
         String Email = "moo@gmail.com";
         System.out.println(ValidateEmail(Email));
+
+        Snake_Game.startGame();
     }
     public static String getInput(String prompt){
         System.out.println(prompt);
@@ -70,6 +71,7 @@ public class Main {
         String password = Login.next();
         boolean userValid = false;
         boolean passwordValid = false;
+        Login.close();
         try {
 
             Scanner x = new Scanner(file);
@@ -93,7 +95,7 @@ public class Main {
 
         if (!userValid || !passwordValid) {
             System.out.println("Not valid");
-        } else System.out.println("Valid"); new GameFrame();
+        } else System.out.println("Valid");
     }
 
 
@@ -111,6 +113,7 @@ public class Main {
         File file = new File("LoginFile.txt");
         String userName = (username);
         FileWriter writer = null;
+        register.close();
         try {
             writer = new FileWriter("LoginFile.txt", true);
             BufferedWriter bw = new BufferedWriter(writer);
